@@ -5,21 +5,32 @@ import { ArrowLeft, ChevronRight, Share2, Bookmark } from "lucide-react";
 import ServiceModalButton from "@/app/components/ServiceModalButton";
 
 export async function generateStaticParams() {
-    const posts = await getDatabaseItems();
-
-    return posts.map((post: any) => ({
-        id: post.id,
-    }));
+    try {
+        const posts = await getDatabaseItems();
+        return posts.map((post: any) => ({
+            id: post.id,
+        }));
+    } catch (error) {
+        console.error("generateStaticParams Error:", error);
+        return [];
+    }
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
 
     // --- 1. 데이터 가져오기 (로직 유지) ---
-    const [properties, markdownBody] = await Promise.all([
-        getPageProperties(id),
-        getPageContent(id),
-    ]);
+    let properties = null;
+    let markdownBody = "";
+
+    try {
+        [properties, markdownBody] = await Promise.all([
+            getPageProperties(id),
+            getPageContent(id),
+        ]);
+    } catch (error) {
+        console.error("ArticlePage Data Fetch Error:", error);
+    }
 
     if (!properties || !properties.properties) {
         return <div className="p-20 text-white text-center">데이터를 불러올 수 없습니다.</div>;

@@ -4,7 +4,12 @@ import ClientHome from "./ClientHome";
 export const revalidate = 60;
 
 export default async function Home() {
-  const databaseItems = await getDatabaseItems();
+  let databaseItems = [];
+  try {
+    databaseItems = await getDatabaseItems();
+  } catch (error) {
+    console.error("Home Data Fetch Error:", error);
+  }
 
   console.log("가져온 글 개수:", databaseItems.length);
 
