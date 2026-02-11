@@ -29,7 +29,7 @@ export default function RootLayout({
       >
         {children}
       </body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
+      <GoogleAnalytics gaId="G-PF4D4W53VS" />
     </html>
   );
 }
