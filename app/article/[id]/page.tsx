@@ -4,6 +4,9 @@ import Link from "next/link";
 import { ArrowLeft, ChevronRight, Share2, Bookmark } from "lucide-react";
 import ServiceModalButton from "@/app/components/ServiceModalButton";
 
+export const revalidate = 60;
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
     try {
         const posts = await getDatabaseItems();
