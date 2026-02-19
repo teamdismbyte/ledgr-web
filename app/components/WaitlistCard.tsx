@@ -14,15 +14,15 @@ export default function WaitlistCard() {
   };
 
   return (
-    <div className="w-full bg-[#121212] border border-gray-800/50 rounded-3xl p-6 flex flex-col gap-4 transition-all duration-300 hover:border-gray-600 hover:shadow-xl hover:shadow-black/50">
-      <div>
+    <div className="relative w-full bg-[#121212] border border-gray-800/50 rounded-3xl p-5 flex flex-col gap-4 overflow-hidden group cursor-default transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50">
+      <div className="relative z-10">
         <h3 className="text-lg font-bold text-white mb-2">Get the Signal</h3>
         <p className="text-sm text-zinc-400 leading-relaxed line-clamp-2">
           Join the exclusive waitlist for our private founders community & top 1% insights.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+      <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-3">
         <input
           type="email"
           placeholder="Enter your email"
@@ -31,7 +31,7 @@ export default function WaitlistCard() {
           required
           className="w-full bg-white/5 border border-gray-700/50 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-white/20 focus:bg-white/10 transition-all"
         />
-        
+
         <button
           type="submit"
           className="w-full flex items-center justify-center gap-2 bg-white text-black font-bold text-sm px-4 py-3 rounded-xl hover:bg-gray-200 transition-colors"
