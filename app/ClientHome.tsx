@@ -140,11 +140,11 @@ function ClientHomeContent({ items }: ClientHomeProps) {
             <section className="relative w-full min-h-[55vh] flex flex-col justify-center items-center px-4 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.8)),url('/hero-bg.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden text-center">
 
 
-                <div className="relative z-10 text-center max-w-[1400px] mx-auto space-y-6 px-4">
-                    <h1 className="text-5xl lg:text-[80px] font-bold text-white leading-[1.1] tracking-tight break-keep whitespace-nowrap">
+                <div className="relative z-10 text-center max-w-[1400px] mx-auto space-y-4 px-4">
+                    <h1 className="text-3xl lg:text-5xl font-bold text-white leading-tight tracking-tight break-keep whitespace-nowrap">
                         Micro Insights. Macro Impact.
                     </h1>
-                    <p className="text-lg lg:text-3xl text-zinc-400 max-w-6xl mx-auto break-keep leading-relaxed whitespace-nowrap">
+                    <p className="text-sm lg:text-base font-light text-zinc-400 max-w-6xl mx-auto break-keep leading-relaxed whitespace-nowrap">
                         Decoding top 1% tech trends & revenue playbooks.
                     </p>
                 </div>
