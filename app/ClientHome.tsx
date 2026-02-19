@@ -141,14 +141,11 @@ function ClientHomeContent({ items }: ClientHomeProps) {
 
 
                 <div className="relative z-10 text-center max-w-7xl mx-auto space-y-6 px-4">
-                    <h1 className="text-4xl lg:text-[50px] font-bold text-white leading-[1.1] tracking-tight break-keep">
-                        작은 발견이 <br className="block xl:hidden" />
-                        거대한 비즈니스가 <br className="block xl:hidden" />
-                        됩니다
+                    <h1 className="text-4xl lg:text-[44px] font-bold text-white leading-[1.1] tracking-tight break-keep">
+                        Spot the Signal. Build the Future.
                     </h1>
                     <p className="text-sm lg:text-lg text-zinc-400 max-w-3xl mx-auto break-keep leading-relaxed">
-                        전 세계 1%의 숨겨진 테크 트렌드와 <br className="block xl:hidden" />
-                        수익 모델을 가장 먼저 분석해 드립니다.
+                        Uncovering hidden trends and revenue playbooks.
                     </p>
                 </div>
             </section>
