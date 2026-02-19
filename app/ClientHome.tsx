@@ -277,10 +277,10 @@ function ClientHomeContent({ items }: ClientHomeProps) {
 
                                                     <div className="absolute bottom-0 left-0 w-full p-6">
                                                         <h3 className="text-xl font-bold text-white mb-1 leading-tight">
-                                                            만들기 전에 먼저 파세요
+                                                            Sell First, Build Later.
                                                         </h3>
                                                         <p className="text-gray-300 text-xs mb-3 line-clamp-1">
-                                                            수개월의 고민을 단 몇 주 만에 끝내드립니다.
+                                                            Validate your idea in weeks, not months.
                                                         </p>
                                                         <a
                                                             href="https://drawn-so.netlify.app/"
@@ -288,7 +288,7 @@ function ClientHomeContent({ items }: ClientHomeProps) {
                                                             rel="noopener noreferrer"
                                                             className="flex items-center gap-2 text-white text-xs font-bold bg-white/10 hover:bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg transition-all border border-white/10 w-fit"
                                                         >
-                                                            더 알아보기 <ChevronRight className="w-3 h-3" />
+                                                            Start Validating <ChevronRight className="w-3 h-3" />
                                                         </a>
                                                     </div>
                                                 </div>
@@ -403,10 +403,10 @@ function ClientHomeContent({ items }: ClientHomeProps) {
 
                                 <div className="absolute bottom-0 left-0 w-full p-6">
                                     <h3 className="text-xl font-bold text-white mb-1 leading-tight">
-                                        만들기 전에 먼저 파세요
+                                        Sell First, Build Later.
                                     </h3>
                                     <p className="text-gray-300 text-xs mb-3 line-clamp-1">
-                                        수개월의 고민을 단 몇 주 만에 끝내드립니다.
+                                        Validate your idea in weeks, not months.
                                     </p>
                                     <a
                                         href="https://drawn-so.netlify.app/"
@@ -414,7 +414,7 @@ function ClientHomeContent({ items }: ClientHomeProps) {
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-2 text-white text-xs font-bold bg-white/10 hover:bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg transition-all border border-white/10 w-fit"
                                     >
-                                        더 알아보기 <ChevronRight className="w-3 h-3" />
+                                        Start Validating <ChevronRight className="w-3 h-3" />
                                     </a>
                                 </div>
                             </div>
