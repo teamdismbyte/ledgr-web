@@ -161,10 +161,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
 
                     {/* 왼쪽: 본문 영역 (col-span-8) */}
                     <main className="col-span-1 xl:col-span-8">
-                        <Link href="/" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 group">
-                            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                            <span className="text-sm font-medium">Back</span>
-                        </Link>
+
 
                         {/* 아티클 헤더 */}
                         <div className="mb-8">
