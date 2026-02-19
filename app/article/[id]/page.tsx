@@ -214,12 +214,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                         {/* 인기 카테고리 */}
                         <div className="hidden xl:block">
                             <div className="flex items-center gap-2 mb-6">
-                                <h3 className="text-lg font-bold text-white">인기 카테고리</h3>
+                                <h3 className="text-lg font-bold text-white">Categories</h3>
                                 <div className="h-px bg-gray-800 flex-1 ml-4" />
                             </div>
                             <div className="flex flex-col gap-2">
-                                {[{ name: "Startups" }, { name: "Design" }, { name: "Tech" }, { name: "Product" }, { name: "Growth" }].map((item) => (
-                                    <Link key={item.name} href={`/?category=${item.name}`} className="text-gray-400 font-medium text-base px-4 py-3 rounded-xl cursor-pointer flex items-center justify-between hover:bg-[#121212] hover:text-white transition-all group">
+                                {[
+                                    { name: "All", path: "/" },
+                                    { name: "Startups", path: "/?category=Startups" },
+                                    { name: "Design", path: "/?category=Design" },
+                                    { name: "Tech", path: "/?category=Tech" },
+                                    { name: "Product", path: "/?category=Product" },
+                                    { name: "Growth", path: "/?category=Growth" }
+                                ].map((item) => (
+                                    <Link key={item.name} href={item.path} className="text-gray-400 font-medium text-base px-4 py-3 rounded-xl cursor-pointer flex items-center justify-between hover:bg-[#121212] hover:text-white transition-all group">
                                         <span>{item.name}</span>
                                         <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </Link>
