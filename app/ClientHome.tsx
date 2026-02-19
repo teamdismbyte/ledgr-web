@@ -4,6 +4,7 @@ import { useState, useEffect, Fragment, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Search, Menu, ArrowUpRight, ChevronRight, Briefcase, X } from "lucide-react";
+import WaitlistCard from "./components/WaitlistCard";
 
 interface ClientHomeProps {
     items: any[];
@@ -496,6 +497,7 @@ function ClientHomeContent({ items }: ClientHomeProps) {
                                     />
                                 </div>
                             </div>
+                            <WaitlistCard />
                         </div>
 
                     </aside>
