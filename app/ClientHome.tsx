@@ -288,7 +288,7 @@ function ClientHomeContent({ items }: ClientHomeProps) {
                                                             rel="noopener noreferrer"
                                                             className="flex items-center gap-2 text-white text-xs font-bold bg-white/10 hover:bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg transition-all border border-white/10 w-fit"
                                                         >
-                                                            Start Validating <ChevronRight className="w-3 h-3" />
+                                                            Learn More <ChevronRight className="w-3 h-3" />
                                                         </a>
                                                     </div>
                                                 </div>
@@ -414,7 +414,7 @@ function ClientHomeContent({ items }: ClientHomeProps) {
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-2 text-white text-xs font-bold bg-white/10 hover:bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg transition-all border border-white/10 w-fit"
                                     >
-                                        Start Validating <ChevronRight className="w-3 h-3" />
+                                        Learn More <ChevronRight className="w-3 h-3" />
                                     </a>
                                 </div>
                             </div>
