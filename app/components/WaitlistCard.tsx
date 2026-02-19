@@ -5,11 +5,12 @@ import { ChevronRight } from "lucide-react";
 
 export default function WaitlistCard() {
   const [email, setEmail] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Temporary logic: Frontend-only alert
-    alert("Thank you! You've been added to the waitlist.");
+    // Temporary logic: Frontend-only state change
+    setIsSubmitted(true);
     setEmail("");
   };
 
@@ -25,18 +26,24 @@ export default function WaitlistCard() {
       <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-3">
         <input
           type="email"
-          placeholder="Enter your email"
+          placeholder={isSubmitted ? "" : "Enter your email"}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required
-          className="w-full bg-white/5 border border-gray-700/50 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-white/20 focus:bg-white/10 transition-all"
+          required={!isSubmitted}
+          disabled={isSubmitted}
+          className={`w-full bg-white/5 border border-gray-700/50 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-white/20 focus:bg-white/10 transition-all ${isSubmitted ? 'opacity-50 cursor-not-allowed' : ''}`}
         />
 
         <button
           type="submit"
-          className="w-full flex items-center justify-center gap-2 bg-white text-black font-bold text-sm px-4 py-3 rounded-xl hover:bg-gray-200 transition-colors"
+          disabled={isSubmitted}
+          className={`w-full flex items-center justify-center gap-2 font-bold text-sm px-4 py-3 rounded-xl transition-colors ${isSubmitted ? 'bg-zinc-800 text-zinc-400 cursor-default' : 'bg-white text-black hover:bg-gray-200'}`}
         >
-          Join Waitlist <ChevronRight className="w-4 h-4" />
+          {isSubmitted ? (
+            "✓ Added to the list"
+          ) : (
+            <>Join Waitlist <ChevronRight className="w-4 h-4" /></>
+          )}
         </button>
       </form>
     </div>
