@@ -237,7 +237,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                         {/* 배너 영역 (채용공고 등) */}
                         <div>
                             <div className="flex items-center gap-2 mb-6">
-                                <h3 className="text-lg font-bold text-white">서비스 & 기회</h3>
+                                <h3 className="text-lg font-bold text-white">The Studio</h3>
                                 <div className="h-px bg-gray-800 flex-1 ml-4" />
                             </div>
                             {/* 배너 이미지들은 경로 그대로 사용 */}

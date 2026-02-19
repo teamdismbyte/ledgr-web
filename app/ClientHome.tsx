@@ -261,7 +261,7 @@ function ClientHomeContent({ items }: ClientHomeProps) {
                                         <div className="xl:hidden flex flex-col">
                                             {/* Header matching main feed */}
                                             <div className="mb-6 flex items-center justify-between">
-                                                <h2 className="text-lg font-bold text-white leading-none">서비스 & 기회</h2>
+                                                <h2 className="text-lg font-bold text-white leading-none">The Studio</h2>
                                             </div>
 
                                             {/* Banner Container matching Grid structure */}
@@ -387,7 +387,7 @@ function ClientHomeContent({ items }: ClientHomeProps) {
                         {/* Spacer to align with Main Feed "Latest Articles" header offset */}
                         {/* Header matching main feed */}
                         <div className="mb-8 flex items-center justify-between">
-                            <h2 className="text-2xl font-bold text-white">서비스 & 기회</h2>
+                            <h2 className="text-2xl font-bold text-white">The Studio</h2>
                         </div>
 
                         {/* Banner Container matching Grid structure */}
