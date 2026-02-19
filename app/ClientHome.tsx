@@ -371,6 +371,7 @@ function ClientHomeContent({ items }: ClientHomeProps) {
                                                         />
                                                     </div>
                                                 </div>
+                                                <WaitlistCard />
                                             </div>
                                         </div>
                                     )}
