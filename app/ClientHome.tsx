@@ -140,15 +140,12 @@ function ClientHomeContent({ items }: ClientHomeProps) {
             <section className="relative w-full min-h-[55vh] flex flex-col justify-center items-center px-4 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.8)),url('/hero-bg.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden text-center">
 
 
-                <div className="relative z-10 text-center max-w-7xl mx-auto space-y-6 px-4">
-                    <h1 className="text-4xl lg:text-[50px] font-bold text-white leading-[1.1] tracking-tight break-keep">
-                        작은 발견이 <br className="block xl:hidden" />
-                        거대한 비즈니스가 <br className="block xl:hidden" />
-                        됩니다
+                <div className="relative z-10 text-center max-w-[1400px] mx-auto space-y-6 px-4">
+                    <h1 className="text-5xl lg:text-[80px] font-bold text-white leading-[1.1] tracking-tight break-keep whitespace-nowrap">
+                        Micro Insights. Macro Impact.
                     </h1>
-                    <p className="text-sm lg:text-lg text-zinc-400 max-w-3xl mx-auto break-keep leading-relaxed">
-                        전 세계 1%의 숨겨진 테크 트렌드와 <br className="block xl:hidden" />
-                        수익 모델을 가장 먼저 분석해 드립니다.
+                    <p className="text-lg lg:text-3xl text-zinc-400 max-w-6xl mx-auto break-keep leading-relaxed whitespace-nowrap">
+                        Decoding top 1% tech trends & revenue playbooks.
                     </p>
                 </div>
             </section>
