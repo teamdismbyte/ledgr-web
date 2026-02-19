@@ -127,7 +127,7 @@ function ClientHomeContent({ items }: ClientHomeProps) {
 
                     <input
                         type="text"
-                        placeholder="검색어를 입력하세요..."
+                        placeholder="Search..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         className="w-full max-w-2xl bg-transparent border-b-2 border-gray-800 text-2xl md:text-4xl font-bold text-white pb-4 focus:outline-none focus:border-white transition-colors placeholder:text-gray-700"
