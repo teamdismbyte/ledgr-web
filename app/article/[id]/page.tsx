@@ -1,9 +1,10 @@
 import { getPageContent, getPageProperties, getDatabaseItems } from "@/lib/notion";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
-import { ArrowLeft, ChevronRight, Share2, Bookmark } from "lucide-react";
+import { ArrowLeft, ChevronRight } from "lucide-react";
 import ServiceModalButton from "@/app/components/ServiceModalButton";
 import ArticleSwipeWrapper from "@/app/components/ArticleSwipeWrapper";
+import ArticleHeaderActions from "@/app/components/ArticleHeaderActions";
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -149,8 +150,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                         <span className="text-xl font-bold tracking-tight text-white">Ledgr</span>
                     </Link>
                     <div className="flex items-center gap-4">
-                        <button className="text-gray-400 hover:text-white transition-colors"><Share2 className="w-5 h-5" /></button>
-                        <button className="text-gray-400 hover:text-white transition-colors"><Bookmark className="w-5 h-5" /></button>
+                        <ArticleHeaderActions title={title} />
                     </div>
                 </div>
             </header>
