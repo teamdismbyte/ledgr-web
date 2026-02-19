@@ -276,11 +276,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                                         <div>
                                             <span className="text-purple-400 font-bold tracking-wider text-[10px] block mb-1 uppercase">Private Coaching</span>
                                             <h3 className="text-sm font-bold text-white leading-snug">
-                                                커리어 퀀텀 점프<br />1:1 멘토링
+                                                Career Quantum Leap<br />1:1 Private Mentoring
                                             </h3>
                                         </div>
                                         <ServiceModalButton className="flex items-center gap-1 text-gray-300 text-[10px] font-bold bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg transition-all border border-white/10 w-fit">
-                                            오픈 예정 <ChevronRight className="w-3 h-3" />
+                                            Learn More <ChevronRight className="w-3 h-3" />
                                         </ServiceModalButton>
                                     </div>
                                     {/* Right Side (30%) - White/Image Area */}
@@ -300,11 +300,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                                         <div>
                                             <span className="text-blue-400 font-bold tracking-wider text-[10px] block mb-1 uppercase">Business</span>
                                             <h3 className="text-sm font-bold text-white leading-snug">
-                                                실무 중심의<br />기업 강의 문의
+                                                Practical Corporate Training<br />Hands-on Workshops & Seminars
                                             </h3>
                                         </div>
                                         <ServiceModalButton className="flex items-center gap-1 text-gray-300 text-[10px] font-bold bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg transition-all border border-white/10 w-fit">
-                                            오픈 예정 <ChevronRight className="w-3 h-3" />
+                                            Learn More <ChevronRight className="w-3 h-3" />
                                         </ServiceModalButton>
                                     </div>
                                     {/* Right Side (30%) - White/Image Area */}
@@ -324,11 +324,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                                         <div>
                                             <span className="text-emerald-400 font-bold tracking-wider text-[10px] block mb-1 uppercase">Community</span>
                                             <h3 className="text-sm font-bold text-white leading-snug">
-                                                함께 성장하는<br />멤버십 가입
+                                                Grow Together<br />Join Our Exclusive Membership
                                             </h3>
                                         </div>
                                         <ServiceModalButton className="flex items-center gap-1 text-gray-300 text-[10px] font-bold bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg transition-all border border-white/10 w-fit">
-                                            오픈 예정 <ChevronRight className="w-3 h-3" />
+                                            Learn More <ChevronRight className="w-3 h-3" />
                                         </ServiceModalButton>
                                     </div>
                                     {/* Right Side (30%) - White/Image Area */}
