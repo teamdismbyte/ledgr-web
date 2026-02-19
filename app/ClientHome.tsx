@@ -1,28 +1,54 @@
 "use client";
 
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect, Fragment, Suspense } from "react";
 import Link from "next/link";
+import { useSearchParams, useRouter } from "next/navigation";
 import { Search, Menu, ArrowUpRight, ChevronRight, Briefcase, X } from "lucide-react";
 
 interface ClientHomeProps {
     items: any[];
 }
 
-export default function ClientHome({ items }: ClientHomeProps) {
+function ClientHomeContent({ items }: ClientHomeProps) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All");
 
+    const searchParams = useSearchParams();
+    const router = useRouter();
+
     const CATEGORIES = [
-        { label: "전체 보기", value: "All" },
-        { label: "스타트업", value: "Startup", keywords: ["스타트업", "startup", "Startup"] },
-        { label: "디자인", value: "Design", keywords: ["디자인", "design", "Design"] },
-        { label: "개발", value: "Dev", keywords: ["개발", "dev", "Dev", "Development"] },
-        { label: "기획", value: "PM", keywords: ["기획", "pm", "PM", "Planning"] },
-        { label: "마케팅", value: "Marketing", keywords: ["마케팅", "marketing", "Marketing"] },
+        { label: "All", value: "All" },
+        { label: "Startups", value: "Startups", keywords: ["스타트업", "startup", "Startups"] },
+        { label: "Design", value: "Design", keywords: ["디자인", "design", "Design"] },
+        { label: "Tech", value: "Tech", keywords: ["개발", "dev", "Dev", "Development", "Tech"] },
+        { label: "Product", value: "Product", keywords: ["기획", "pm", "PM", "Planning", "Product"] },
+        { label: "Growth", value: "Growth", keywords: ["마케팅", "marketing", "Marketing", "Growth"] },
     ];
+
+    // Sync URL param with state
+    useEffect(() => {
+        const categoryParam = searchParams.get("category");
+        if (categoryParam) {
+            const matchedCategory = CATEGORIES.find(c => c.value.toLowerCase() === categoryParam.toLowerCase());
+            if (matchedCategory) {
+                setSelectedCategory(matchedCategory.value);
+            }
+        }
+    }, [searchParams]);
+
+    // Update URL when category changes
+    const handleCategoryChange = (categoryValue: string) => {
+        setSelectedCategory(categoryValue);
+        if (categoryValue === "All") {
+            router.push("/", { scroll: false });
+        } else {
+            router.push(`/?category=${categoryValue}`, { scroll: false });
+        }
+        setIsMobileMenuOpen(false);
+    };
 
     // Close search on ESC key
     useEffect(() => {
@@ -136,7 +162,7 @@ export default function ClientHome({ items }: ClientHomeProps) {
                         {CATEGORIES.map((category) => (
                             <button
                                 key={category.value}
-                                onClick={() => setSelectedCategory(category.value)}
+                                onClick={() => handleCategoryChange(category.value)}
                                 className={`w-full text-left font-medium text-base px-4 py-3 rounded-xl cursor-pointer flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:text-white ${selectedCategory === category.value
                                     ? "text-white font-bold bg-white/5"
                                     : "text-gray-400"
@@ -152,7 +178,7 @@ export default function ClientHome({ items }: ClientHomeProps) {
 
                         {/* Intro Text */}
                         <div className="mb-6 md:mb-8 flex items-center justify-between relative">
-                            <h2 className="text-lg md:text-2xl font-bold text-white leading-none">인사이트</h2>
+                            <h2 className="text-lg md:text-2xl font-bold text-white leading-none">Latest Articles</h2>
                             <button
                                 className="md:hidden text-gray-400"
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -167,10 +193,7 @@ export default function ClientHome({ items }: ClientHomeProps) {
                                         {CATEGORIES.map((cat) => (
                                             <div
                                                 key={cat.value}
-                                                onClick={() => {
-                                                    setSelectedCategory(cat.value);
-                                                    setIsMobileMenuOpen(false);
-                                                }}
+                                                onClick={() => handleCategoryChange(cat.value)}
                                                 className={`px-4 py-2 hover:bg-white/5 cursor-pointer text-sm transition-all duration-300 ${selectedCategory === cat.value ? "text-white font-bold" : "text-gray-400 hover:text-white"
                                                     }`}
                                             >
@@ -521,5 +544,13 @@ export default function ClientHome({ items }: ClientHomeProps) {
                 </div>
             )}
         </div>
+    );
+}
+
+export default function ClientHome(props: ClientHomeProps) {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-[#0b0c10]" />}>
+            <ClientHomeContent {...props} />
+        </Suspense>
     );
 }

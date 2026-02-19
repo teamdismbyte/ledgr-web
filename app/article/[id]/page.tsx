@@ -167,7 +167,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
 
                         {/* 아티클 헤더 */}
                         <div className="mb-8">
-                            <span className="text-xs font-bold text-gray-500 mb-4 block uppercase tracking-wider">{category}</span>
+                            <Link href={`/?category=${category}`} className="text-xs font-bold text-gray-500 mb-4 block uppercase tracking-wider hover:text-white transition-colors w-fit">
+                                {category}
+                            </Link>
 
                             <h1 className="text-3xl lg:text-4xl font-bold text-gray-100 leading-tight mb-6">{title}</h1>
 
@@ -216,8 +218,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                                 <div className="h-px bg-gray-800 flex-1 ml-4" />
                             </div>
                             <div className="flex flex-col gap-2">
-                                {[{ name: "스타트업" }, { name: "디자인" }, { name: "개발" }, { name: "기획" }, { name: "마케팅" }].map((item) => (
-                                    <Link key={item.name} href="/" className="text-gray-400 font-medium text-base px-4 py-3 rounded-xl cursor-pointer flex items-center justify-between hover:bg-[#121212] hover:text-white transition-all group">
+                                {[{ name: "Startups" }, { name: "Design" }, { name: "Tech" }, { name: "Product" }, { name: "Growth" }].map((item) => (
+                                    <Link key={item.name} href={`/?category=${item.name}`} className="text-gray-400 font-medium text-base px-4 py-3 rounded-xl cursor-pointer flex items-center justify-between hover:bg-[#121212] hover:text-white transition-all group">
                                         <span>{item.name}</span>
                                         <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </Link>
