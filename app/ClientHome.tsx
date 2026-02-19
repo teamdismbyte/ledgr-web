@@ -142,10 +142,10 @@ function ClientHomeContent({ items }: ClientHomeProps) {
 
                 <div className="relative z-10 text-center max-w-7xl mx-auto space-y-6 px-4">
                     <h1 className="text-4xl lg:text-[44px] font-bold text-white leading-[1.1] tracking-tight break-keep">
-                        Spot the Signal. Build the Future.
+                        Spot the Signal & Build the Future
                     </h1>
                     <p className="text-sm lg:text-lg text-zinc-400 max-w-3xl mx-auto break-keep leading-relaxed">
-                        Uncovering hidden trends and revenue playbooks.
+                        Uncovering hidden trends and revenue playbooks
                     </p>
                 </div>
             </section>
