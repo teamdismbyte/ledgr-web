@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import { ArrowLeft, ChevronRight, Share2, Bookmark } from "lucide-react";
 import ServiceModalButton from "@/app/components/ServiceModalButton";
+import ArticleSwipeWrapper from "@/app/components/ArticleSwipeWrapper";
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -139,7 +140,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
 
     // --- 3. 디자인 적용 (기존 page.tsx 디자인 복구) ---
     return (
-        <div className="min-h-screen bg-[#0b0c10] text-gray-300 font-sans pb-20 overflow-x-hidden">
+        <ArticleSwipeWrapper className="min-h-screen bg-[#0b0c10] text-gray-300 font-sans pb-20 overflow-x-hidden">
 
             {/* 헤더 (Sticky) */}
             <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-[#0b0c10]/80 border-b border-gray-800/50">
@@ -346,6 +347,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
 
                 </div>
             </div >
-        </div >
+        </ArticleSwipeWrapper >
     );
 }
