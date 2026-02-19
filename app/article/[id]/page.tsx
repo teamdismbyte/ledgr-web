@@ -300,7 +300,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                                         <div>
                                             <span className="text-blue-400 font-bold tracking-wider text-[10px] block mb-1 uppercase">Business</span>
                                             <h3 className="text-sm font-bold text-white leading-snug">
-                                                Practical Corporate Training<br />Hands-on Workshops & Seminars
+                                                Corporate Training<br />Hands-on Workshops
                                             </h3>
                                         </div>
                                         <ServiceModalButton className="flex items-center gap-1 text-gray-300 text-[10px] font-bold bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg transition-all border border-white/10 w-fit">
@@ -324,7 +324,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                                         <div>
                                             <span className="text-emerald-400 font-bold tracking-wider text-[10px] block mb-1 uppercase">Community</span>
                                             <h3 className="text-sm font-bold text-white leading-snug">
-                                                Grow Together<br />Join Our Exclusive Membership
+                                                Grow Together<br />Exclusive Membership
                                             </h3>
                                         </div>
                                         <ServiceModalButton className="flex items-center gap-1 text-gray-300 text-[10px] font-bold bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg transition-all border border-white/10 w-fit">

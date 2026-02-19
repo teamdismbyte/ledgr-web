@@ -327,7 +327,7 @@ function ClientHomeContent({ items }: ClientHomeProps) {
                                                         <div>
                                                             <span className="text-blue-400 font-bold tracking-wider text-[10px] block mb-1 uppercase">Business</span>
                                                             <h3 className="text-sm font-bold text-white leading-snug">
-                                                                Practical Corporate Training<br />Hands-on Workshops & Seminars
+                                                                Corporate Training<br />Hands-on Workshops
                                                             </h3>
                                                         </div>
                                                         <button
@@ -354,7 +354,7 @@ function ClientHomeContent({ items }: ClientHomeProps) {
                                                         <div>
                                                             <span className="text-emerald-400 font-bold tracking-wider text-[10px] block mb-1 uppercase">Community</span>
                                                             <h3 className="text-sm font-bold text-white leading-snug">
-                                                                Grow Together<br />Join Our Exclusive Membership
+                                                                Grow Together<br />Exclusive Membership
                                                             </h3>
                                                         </div>
                                                         <button
@@ -453,7 +453,7 @@ function ClientHomeContent({ items }: ClientHomeProps) {
                                     <div>
                                         <span className="text-blue-400 font-bold tracking-wider text-[10px] block mb-1 uppercase">Business</span>
                                         <h3 className="text-sm font-bold text-white leading-snug">
-                                            Practical Corporate Training<br />Hands-on Workshops & Seminars
+                                            Corporate Training<br />Hands-on Workshops
                                         </h3>
                                     </div>
                                     <button
@@ -480,7 +480,7 @@ function ClientHomeContent({ items }: ClientHomeProps) {
                                     <div>
                                         <span className="text-emerald-400 font-bold tracking-wider text-[10px] block mb-1 uppercase">Community</span>
                                         <h3 className="text-sm font-bold text-white leading-snug">
-                                            Grow Together<br />Join Our Exclusive Membership
+                                            Grow Together<br />Exclusive Membership
                                         </h3>
                                     </div>
                                     <button
