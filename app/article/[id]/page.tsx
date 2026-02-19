@@ -162,7 +162,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                     <main className="col-span-1 xl:col-span-8">
                         <Link href="/" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 group">
                             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                            <span className="text-sm font-medium">뒤로 가기</span>
+                            <span className="text-sm font-medium">Back</span>
                         </Link>
 
                         {/* 아티클 헤더 */}
