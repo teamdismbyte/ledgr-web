@@ -5,6 +5,7 @@ import { ArrowLeft, ChevronRight } from "lucide-react";
 import ServiceModalButton from "@/app/components/ServiceModalButton";
 import ArticleSwipeWrapper from "@/app/components/ArticleSwipeWrapper";
 import ArticleHeaderActions from "@/app/components/ArticleHeaderActions";
+import WaitlistCard from "@/app/components/WaitlistCard";
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -338,6 +339,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                                         />
                                     </div>
                                 </div>
+                                <WaitlistCard />
                             </div>
                         </div>
                     </aside>
