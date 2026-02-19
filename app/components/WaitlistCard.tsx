@@ -16,9 +16,9 @@ export default function WaitlistCard() {
   return (
     <div className="relative w-full bg-[#121212] border border-gray-800/50 rounded-3xl p-5 flex flex-col gap-4 overflow-hidden group cursor-default transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/50">
       <div className="relative z-10">
-        <h3 className="text-lg font-bold text-white mb-2">Get the Signal</h3>
-        <p className="text-sm text-zinc-400 leading-relaxed line-clamp-2">
-          Join the exclusive waitlist for our private founders community & top 1% insights.
+        <h3 className="text-lg font-bold text-white mb-2">Join the Builders' Network</h3>
+        <p className="text-sm text-zinc-400 leading-relaxed">
+          A private space for founders and future builders to share raw insights and network. Invites roll out soon.
         </p>
       </div>
 
