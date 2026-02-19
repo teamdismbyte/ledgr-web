@@ -525,19 +525,19 @@ function ClientHomeContent({ items }: ClientHomeProps) {
 
                         <div className="text-center space-y-6">
                             <h2 className="text-xl font-bold text-white">
-                                서비스 고도화 작업 중
+                                Elevating Our Services
                             </h2>
 
                             <div className="space-y-2 text-gray-300 text-sm leading-relaxed keep-all">
-                                <p>현재 더 높은 퀄리티의 서비스를 제공하기 위해<br />리뉴얼 작업을 진행하고 있습니다.</p>
-                                <p>관련된 <span className="text-white font-bold">비즈니스 제휴나 사전 문의</span>는<br />언제든 환영합니다.</p>
+                                <p>We are currently revamping this program to deliver a world-class experience.</p>
+                                <p>In the meantime, we warmly welcome early inquiries and business partnerships.</p>
                             </div>
 
                             <a
                                 href="mailto:teamdism2024@gmail.com?subject=[Micro Hunter] 비즈니스 제휴 문의"
                                 className="block w-full bg-white text-black font-bold py-3.5 rounded-xl hover:bg-gray-200 transition-colors"
                             >
-                                문의하기
+                                Get in Touch
                             </a>
                         </div>
                     </div>
